@@ -1,0 +1,105 @@
+%-------------------------
+% Resume in LaTeX
+% Author : Nguyen Phuc Thanh
+% Enhanced based on recommendations and modifications
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[dvipsnames]{xcolor}  % <-- Use xcolor for color support
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[T1]{fontenc} % Use T1 font encoding
+\input{glyphtounicode}   % Ensure this file is available, or remove if unnecessary
+
+% Define your custom gray color (50% gray)
+\definecolor{mygray}{gray}{0.5}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}  % Footer with centered page number
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Fix footskip warning
+\setlength{\footskip}{14pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%------------------
+% Custom commands
+%------------------
+
+% Resume item
+\newcommand{\resumeItem}[1]{%
+  \item\small{#1\vspace{-2pt}}
+}
+
+% Resume subheading (e.g., for Education or Experience)
+\newcommand{\resumeSubheading}[4]{%
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% New Project Macro:
+% #1 = Project Title
+% #2 = Tech Stack
+% #3 = Team Size
+\newcommand{\resumeProjectHeading}[3]{%
+    \item
+    \textbf{#1} \textcolor{mygray}{\small \,|\, \textit{#2}} \\[2pt]
+    {\small\textbf{Team Size:} #3} \vspace{-7pt}
+}
+
+% Environment for subheadings
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+% Environment for bullet items
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%------------------
+\begin{document}
+
+\input{sections/header}
+
+\input{sections/education}
+
+\input{sections/skills}
+
+\input{sections/experience}
+
+\input{sections/projects}
+
+\end{document}
