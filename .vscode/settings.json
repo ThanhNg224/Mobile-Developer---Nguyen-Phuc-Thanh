@@ -1,5 +1,8 @@
 {
   "latex-workshop.latex.outDir": "%DIR%/build",
+  "latex-workshop.linting.chktex.exec.args": [
+    "-wall", "-n1", "-n8", "-n22", "-n30", "-e16", "-q"
+  ],
   "latex-workshop.latex.clean.subfolder.enabled": true,
   "latex-workshop.latex.clean.fileTypes": [
     "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot",
