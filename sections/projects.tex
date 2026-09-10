@@ -2,20 +2,9 @@
 \section{Projects}
   \resumeSubHeadingListStart
 
-% --- Viettel Verification App ---
-\resumeProjectHeading
-  {Viettel EID/Passport Verification App – Android Kiosk Solution \textnormal{(Built for Viettel, based on official Figma designs)}}
-  {Kotlin, MVVM, Jetpack, ML Kit, REST API}
-\resumeItemListStart
-  \resumeItem{Developed an Android kiosk application in \textbf{Kotlin} using \textbf{MVVM + Clean Architecture}, deployed on Joyusing Z10S Pro devices with robust lifecycle handling and hardware integration.}
-  \resumeItem{Integrated manufacturer SDKs for camera, NFC reader, and biometric modules, implementing asynchronous capture/processing flows with \textbf{Coroutines} for smooth and stable real-time operations.}
-  \resumeItem{Implemented a full identity verification pipeline: document capture, MRZ OCR, ML Kit image preprocessing, NFC chip reading, and face-matching via Face Engine API.}
-  \resumeItem{Connected with Viettel backend systems using \textbf{Retrofit} and secure REST APIs, and integrated \textbf{VNPAY sandbox QR payment} along with digital signing modules for transaction validation.}
-\resumeItemListEnd
-
 % --- Kalapa Behavior Score Flutter App ---
 \resumeProjectHeading
-  {Kalapa Behavior Score – Flutter Credit Scoring Demo App \textnormal{(Built at Kalapa JSC)}}
+  {Kalapa Behavior Score – Flutter Credit Scoring Demo App}
   {Flutter, Riverpod (Generator), go\_router, Freezed, Dio, MethodChannel}
 \resumeItemListStart
   \resumeItem{Built a Flutter client showcasing the \textbf{Kalapa Behavior Score SDK} in a simulated consumer-loan flow, using \textbf{Feature-First Clean Architecture} (presentation/domain/data/core) for real-time on-device credit/risk scoring.}
@@ -26,7 +15,7 @@
 
 % --- LOS Miniapp Host ---
 \resumeProjectHeading
-  {LOS Miniapp Host – Flutter WebView Loan-Registration App \textnormal{(Built at Kalapa JSC)}}
+  {LOS Miniapp Host – Flutter WebView Loan-Registration App}
   {Flutter, Riverpod (Generator), go\_router, InAppWebView, Dio, Freezed}
 \resumeItemListStart
   \resumeItem{Built a Flutter host app embedding a partner mini-app (FE CREDIT loan registration) via an in-app \textbf{WebView} instead of handing off to an external browser, on \textbf{Feature-First Clean Architecture} (presentation/domain/data/core).}
@@ -34,13 +23,25 @@
   \resumeItem{Implemented enterprise structured logging with redaction, \textbf{fpdart}-based functional error handling, and a Material 3 design system with WCAG-compliant theming and English/Vietnamese localization.}
 \resumeItemListEnd
 
-%--- DSoft Spa Management App ---
+% --- Viettel Verification App ---
 \resumeProjectHeading
-  {DSoft – Spa Management Application}
-  {Flutter, Dart, BLoC Architecture}
+  {Viettel EID/Passport Verification App – Android Kiosk Solution}
+  {Kotlin, MVVM, Jetpack, ML Kit, REST API}
 \resumeItemListStart
-  \resumeItem{Developed a Flutter-based spa management application with Clean Architecture and custom BLoC framework.}
-  \resumeItem{Implemented modules for customer, staff, service, booking, and financial management, along with reporting and multi-language support.}
+  \resumeItem{Developed an Android kiosk application in \textbf{Kotlin} using \textbf{MVVM + Clean Architecture}, deployed on Joyusing Z10S Pro devices with robust lifecycle handling and hardware integration.}
+  \resumeItem{Integrated manufacturer SDKs for camera, NFC reader, and biometric modules, implementing asynchronous capture/processing flows with \textbf{Coroutines} for smooth and stable real-time operations.}
+  \resumeItem{Implemented a full identity verification pipeline: document capture, MRZ OCR, ML Kit image preprocessing, NFC chip reading, and face-matching via Face Engine API.}
+  \resumeItem{Connected with Viettel backend systems using \textbf{Retrofit} and secure REST APIs, and integrated \textbf{VNPAY sandbox QR payment} along with digital signing modules for transaction validation.}
+\resumeItemListEnd
+
+% --- eKYC Android SDK Modularization ---
+\resumeProjectHeading
+  {eKYC Android SDK – Multi-Module Architecture Refactor}
+  {Kotlin, Gradle Multi-Module, Clean Architecture, CI/CD}
+\resumeItemListStart
+  \resumeItem{Refactored a monolithic Android eKYC SDK into a multi-module architecture (foundation, platform, capabilities, facades, composition), separating publishable host-facing facades (\textbf{document-sdk}, \textbf{liveness-sdk}, \textbf{nfc-sdk}) from the full \textbf{ekyc-sdk} composition root.}
+  \resumeItem{Enforced a strict one-directional dependency graph (capability to facade to composition, no peer-capability edges) via a Gradle-level dependency matrix check to prevent architectural drift.}
+  \resumeItem{Designed capability modules (camera, document capture, liveness detection, NFC) behind shared \textbf{core} contracts/gateways, plus a centralized localization system and a numbered error-code taxonomy (\textbf{KalapaSDKException}) for consistent host integration.}
 \resumeItemListEnd
 
   \resumeSubHeadingListEnd
