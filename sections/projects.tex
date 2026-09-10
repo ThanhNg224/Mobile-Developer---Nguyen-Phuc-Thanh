@@ -37,11 +37,11 @@
 % --- eKYC Android SDK Modularization ---
 \resumeProjectHeading
   {eKYC Android SDK – Multi-Module Architecture Refactor}
-  {Kotlin, Gradle Multi-Module, Clean Architecture, CI/CD}
+  {Kotlin, Gradle Multi-Module, CameraX, ML Kit, Retrofit, Coroutines, CI/CD}
 \resumeItemListStart
-  \resumeItem{Refactored a monolithic Android eKYC SDK into a multi-module architecture (foundation, platform, capabilities, facades, composition), separating publishable host-facing facades (\textbf{document-sdk}, \textbf{liveness-sdk}, \textbf{nfc-sdk}) from the full \textbf{ekyc-sdk} composition root.}
-  \resumeItem{Enforced a strict one-directional dependency graph (capability to facade to composition, no peer-capability edges) via a Gradle-level dependency matrix check to prevent architectural drift.}
-  \resumeItem{Designed capability modules (camera, document capture, liveness detection, NFC) behind shared \textbf{core} contracts/gateways, plus a centralized localization system and a numbered error-code taxonomy (\textbf{KalapaSDKException}) for consistent host integration.}
+  \resumeItem{Split a monolithic Android SDK into a multi-module \textbf{Gradle} project with custom \textbf{convention plugins} (\texttt{build-logic}) and a centralized \textbf{version catalog} (\texttt{libs.versions.toml}).}
+  \resumeItem{Built capability modules for \textbf{CameraX}, document capture with \textbf{ML Kit} (face detection, text recognition/OCR, barcode scanning), on-device liveness detection, and \textbf{NFC} chip reading, using \textbf{Kotlin Coroutines}, \textbf{AndroidX Lifecycle} (ViewModel/LiveData), and \textbf{Retrofit}/\textbf{OkHttp}.}
+  \resumeItem{Enforced a one-directional module dependency graph (no cyclic dependencies) via a custom Gradle task inspecting \texttt{api}/\texttt{implementation} project edges, and set up \textbf{Maven Central} publishing (Dokka API docs) with \textbf{GitLab CI/CD} for versioned module releases.}
 \resumeItemListEnd
 
   \resumeSubHeadingListEnd
