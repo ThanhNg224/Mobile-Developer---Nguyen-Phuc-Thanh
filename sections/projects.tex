@@ -24,24 +24,14 @@
   \resumeItem{Shipped dev/prod build flavors with obfuscated, minified release builds (R8, split debug symbols) for Google Play distribution.}
 \resumeItemListEnd
 
-% --- File Recovery App ---
+% --- LOS Miniapp Host ---
 \resumeProjectHeading
-  {File Recovery – Smart Android Media Restoration App \textnormal}
-  {Kotlin, MVVM, Hilt, Jetpack, Coroutines, Material 3, Ads SDK (IAA)}
+  {LOS Miniapp Host – Flutter WebView Loan-Registration App \textnormal{(Built at Kalapa JSC)}}
+  {Flutter, Riverpod (Generator), go\_router, InAppWebView, Dio, Freezed}
 \resumeItemListStart
-  \resumeItem{Developed a full-featured Android app that scans, previews, and restores deleted media (images, videos, audio, documents) without root access.}
-  \resumeItem{Integrated \textbf{In-App Ads (IAA)} via a custom JitPack SDK for banners, interstitials, and rewarded ads as the core monetization system.}
-  \resumeItem{Built with MVVM + Hilt, Coroutines/Flow for async I/O, and modern Scoped Storage APIs with robust runtime permission handling for secure media access.}
-\resumeItemListEnd
-
-% --- Device Management System ---
-\resumeProjectHeading
-  {Device Management System – Android OTA Agent \& Monitoring Platform \textnormal{(Built for SunGroup’s SunWorld)}}
-  {Kotlin, JavaScript, Node.js, Next.js, MongoDB}
-\resumeItemListStart
-  \resumeItem{Developed a lightweight \textbf{Kotlin agent} using \textbf{Coroutines} for background execution, enabling silent APK installation, scheduled tasks, and fully automated OTA updates on Android-based face terminals.}
-  \resumeItem{Built persistent background services to collect telemetry (CPU, RAM, storage), stream real-time status via WebSocket, and log device analytics.}
-  \resumeItem{Integrated with a web dashboard (Next.js + Node.js) to trigger OTA updates, monitor device health, and manage online/offline terminals across multiple deployments.}
+  \resumeItem{Built a Flutter host app embedding a partner mini-app (FE CREDIT loan registration) via an in-app \textbf{WebView} instead of handing off to an external browser, on \textbf{Feature-First Clean Architecture} (presentation/domain/data/core).}
+  \resumeItem{Used \textbf{Riverpod} (Generator, \texttt{@riverpod}) for compile-time-safe DI/state with \texttt{autoDispose} lifecycle management, and \textbf{go\_router} for declarative routing and deep linking.}
+  \resumeItem{Implemented enterprise structured logging with redaction, \textbf{fpdart}-based functional error handling, and a Material 3 design system with WCAG-compliant theming and English/Vietnamese localization.}
 \resumeItemListEnd
 
 %--- DSoft Spa Management App ---
@@ -52,4 +42,5 @@
   \resumeItem{Developed a Flutter-based spa management application with Clean Architecture and custom BLoC framework.}
   \resumeItem{Implemented modules for customer, staff, service, booking, and financial management, along with reporting and multi-language support.}
 \resumeItemListEnd
+
   \resumeSubHeadingListEnd
